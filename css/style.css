@@ -1,0 +1,54 @@
+@import url("reset.css");
+body {
+  background: #000;
+  color: #fff;
+  padding: 0 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kv {
+  height: 100vh;
+}
+.kv .kv_pic {
+  margin: 100px auto;
+}
+.kv .scroll {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.kv .scroll:before {
+  content: "";
+  width: 1px;
+  height: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  animation: lineAnimation 2s linear infinite;
+}
+
+@keyframes lineAnimation {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 100px;
+    opacity: 100%;
+  }
+}
+header {
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
