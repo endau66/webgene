@@ -32,7 +32,29 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-
+.row-rev {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.col-2 {
+  width: 20%;
+}
+.col-4 {
+  width: 40%;
+}
+.col-5 {
+  width: 50%;
+}
+.col-6 {
+  width: 60%;
+}
+.col-8 {
+  width: 80%;
+}
+.col-10 {
+  width: 100%;
+}
 // --------------------------------------------
 .kv {
   height: 100vh;
@@ -88,9 +110,21 @@ header {
     }
   }
 }
+
 .title {
   text-align: center;
   margin: 100px 0;
 }
 .sv_content {
+  margin: 0 auto;
+  .sv_item {
+    margin-bottom: 60px;
+    h3 {
+      margin-bottom: 20px;
+    }
+    p {
+      border-left: 3px solid $white;
+      padding-left: 20px;
+    }
+  }
 }
