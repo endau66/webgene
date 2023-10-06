@@ -3,9 +3,25 @@ body {
   background: #000;
   color: #fff;
   padding: 0 32px;
+  font-family: "Poppins", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
@@ -27,14 +43,16 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  font-weight: 200;
+  letter-spacing: 0.2em;
 }
 .kv .scroll:before {
   content: "";
-  width: 1px;
+  width: 0.5px;
   height: 0;
   background-color: #fff;
   position: absolute;
-  top: 40px;
+  top: calc(100% + 0.5em);
   left: 50%;
   animation: lineAnimation 2s linear infinite;
 }
@@ -51,4 +69,22 @@ body {
 }
 header {
   align-items: center;
+  margin-bottom: 50px;
+}
+header .navList {
+  letter-spacing: 0.2em;
+  position: relative;
+}
+header .navList li a {
+  display: block;
+  padding-left: 20px;
+}
+header .navList .active {
+  color: yellow;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  margin: 100px 0;
 }/*# sourceMappingURL=style.css.map */
