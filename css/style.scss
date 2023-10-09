@@ -1,32 +1,43 @@
 @import url("reset.css");
 
-$primary: #e60603;
+$primary: #ff3c38;
+$blue: #64cfe4;
+$d_gray: #5e5e5e;
 $white: #fff;
+$fontLight: 300;
+$fontBold: 900;
 
 // --------------------------------------------
 body {
   background: #000;
   color: $white;
-  padding: 0 32px;
   font-family: "Poppins", "Noto Sans TC", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 h2 {
   font-size: 40px;
-  font-weight: 900;
+  font-weight: $fontBold;
   text-transform: uppercase;
 }
 h3 {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: $fontLight;
   text-transform: uppercase;
+}
+h4 {
+  font-size: 24px;
+  font-weight: $fontBold;
+  text-transform: uppercase;
+}
+h5 {
+  font-size: 20px;
+  font-weight: $fontBold;
 }
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
 }
 .row {
   display: flex;
@@ -36,6 +47,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+}
+.mb_100 {
+  margin-bottom: 100px;
 }
 .col-2 {
   width: 20%;
@@ -113,7 +127,8 @@ header {
 
 .title {
   text-align: center;
-  margin: 100px 0;
+  // margin: 100px 0;
+  margin-bottom: 60px;
 }
 .sv_content {
   margin: 0 auto;
@@ -125,6 +140,142 @@ header {
     p {
       border-left: 3px solid $white;
       padding-left: 20px;
+    }
+  }
+}
+
+//區塊三
+.team_content {
+  margin: 0 auto;
+  .team_item {
+    max-width: 300px;
+    width: 30%;
+    background: $primary;
+    padding: 20px;
+    position: relative;
+    h4:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -1rem;
+      top: 2.2rem;
+      width: 2rem;
+      height: 1px;
+      background: $white;
+    }
+    img {
+      // border-radius: 50%;
+      margin: 20px auto;
+    }
+    .team_txt {
+      p {
+        font-weight: $fontLight;
+      }
+    }
+  }
+  .team_box01 {
+    margin-top: 100px;
+  }
+  .team_box02 {
+    margin: 50px 0;
+  }
+  .team_box03 {
+    margin-bottom: 100px;
+  }
+}
+
+// contact
+.contact_bg {
+  background-color: $white;
+  position: relative;
+  padding: 100px 0;
+  .contact_l {
+    color: #333;
+    margin-right: 10em;
+    .title {
+      text-align: left;
+      margin: 0 0 150px;
+    }
+    .phone_box {
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      color: $primary;
+      font-size: 24px;
+      img {
+        margin-right: 1rem;
+      }
+    }
+    .nameAde {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #333;
+    }
+  }
+  .contact_r {
+    &:before {
+      content: "";
+      display: block;
+      width: 50vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #333;
+    }
+    .info_form {
+      position: relative;
+      .input_txt {
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding: 10px 0;
+        outline: none;
+        color: $white;
+        border-bottom: 1px solid $d_gray;
+        margin-bottom: 40px;
+      }
+      .area_txt {
+        color: $d_gray;
+      }
+      .input_textarea {
+        resize: none;
+        width: 100%;
+        height: 200px;
+        background: transparent;
+        outline: none;
+        color: $white;
+        border: 1px solid $d_gray;
+        margin-bottom: 40px;
+      }
+      .btn {
+        border: transparent;
+        cursor: pointer;
+        padding: 10px 50px;
+        border-radius: 100px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// footer
+footer {
+  padding: 50px;
+  text-align: center;
+  .container {
+    position: relative;
+    margin-bottom: 0;
+    span {
+      font-size: 14px;
+    }
+    a {
+      position: absolute;
+      right: 0;
+      top: -50%;
+    }
+    img:hover {
+      filter: brightness(0.3);
     }
   }
 }

@@ -2,7 +2,6 @@
 body {
   background: #000;
   color: #fff;
-  padding: 0 32px;
   font-family: "Poppins", "Noto Sans TC", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -20,11 +19,21 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
 }
 
 .row {
@@ -36,6 +45,10 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+}
+
+.mb_100 {
+  margin-bottom: 100px;
 }
 
 .col-2 {
@@ -116,7 +129,7 @@ header .navList .active {
 
 .title {
   text-align: center;
-  margin: 100px 0;
+  margin-bottom: 60px;
 }
 
 .sv_content {
@@ -131,4 +144,132 @@ header .navList .active {
 .sv_content .sv_item p {
   border-left: 3px solid #fff;
   padding-left: 20px;
+}
+
+.team_content {
+  margin: 0 auto;
+}
+.team_content .team_item {
+  max-width: 300px;
+  width: 30%;
+  background: #ff3c38;
+  padding: 20px;
+  position: relative;
+}
+.team_content .team_item h4:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -1rem;
+  top: 2.2rem;
+  width: 2rem;
+  height: 1px;
+  background: #fff;
+}
+.team_content .team_item img {
+  margin: 20px auto;
+}
+.team_content .team_item .team_txt p {
+  font-weight: 300;
+}
+.team_content .team_box01 {
+  margin-top: 100px;
+}
+.team_content .team_box02 {
+  margin: 50px 0;
+}
+.team_content .team_box03 {
+  margin-bottom: 100px;
+}
+
+.contact_bg {
+  background-color: #fff;
+  position: relative;
+  padding: 100px 0;
+}
+.contact_bg .contact_l {
+  color: #333;
+  margin-right: 10em;
+}
+.contact_bg .contact_l .title {
+  text-align: left;
+  margin: 0 0 150px;
+}
+.contact_bg .contact_l .phone_box {
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  color: #ff3c38;
+  font-size: 24px;
+}
+.contact_bg .contact_l .phone_box img {
+  margin-right: 1rem;
+}
+.contact_bg .contact_l .nameAde {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+.contact_bg .contact_r:before {
+  content: "";
+  display: block;
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #333;
+}
+.contact_bg .contact_r .info_form {
+  position: relative;
+}
+.contact_bg .contact_r .info_form .input_txt {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  outline: none;
+  color: #fff;
+  border-bottom: 1px solid #5e5e5e;
+  margin-bottom: 40px;
+}
+.contact_bg .contact_r .info_form .area_txt {
+  color: #5e5e5e;
+}
+.contact_bg .contact_r .info_form .input_textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border: 1px solid #5e5e5e;
+  margin-bottom: 40px;
+}
+.contact_bg .contact_r .info_form .btn {
+  border: transparent;
+  cursor: pointer;
+  padding: 10px 50px;
+  border-radius: 100px;
+  font-weight: 700;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+}
+footer .container {
+  position: relative;
+  margin-bottom: 0;
+}
+footer .container span {
+  font-size: 14px;
+}
+footer .container a {
+  position: absolute;
+  right: 0;
+  top: -50%;
+}
+footer .container img:hover {
+  filter: brightness(0.3);
 }/*# sourceMappingURL=style.css.map */
