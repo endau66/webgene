@@ -1,4 +1,8 @@
 @import url("reset.css");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #000;
   color: #fff;
@@ -79,7 +83,7 @@ h5 {
   height: 100vh;
 }
 .kv .kv_pic {
-  margin: 100px auto;
+  margin: 0 auto;
 }
 .kv .scroll {
   display: inline-block;
@@ -113,18 +117,49 @@ h5 {
 header {
   align-items: center;
   margin-bottom: 50px;
+  padding: 0 60px;
+  height: 100px;
+  transition: top 0.3s ease;
 }
 header .navList {
   letter-spacing: 0.2em;
   position: relative;
 }
+header .navList li {
+  padding: 0 20px;
+}
 header .navList li a {
   display: block;
-  padding-left: 20px;
+  padding: 10px 0;
 }
-header .navList .active {
-  color: yellow;
+header .navList li a.active {
+  color: #ff3c38;
+  font-weight: 900;
+  letter-spacing: 0;
   position: relative;
+}
+header .navList li a.active::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 70%;
+  height: 5px;
+  background: #ff3c38;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.9;
+  z-index: 99;
+}
+
+main {
+  padding-top: 100px;
 }
 
 .title {
@@ -146,6 +181,40 @@ header .navList .active {
   padding-left: 20px;
 }
 
+.ad_contant {
+  overflow: hidden;
+}
+.arrow_btn {
+  cursor: pointer;
+}
+.arrow_btn .arrow {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.arrow_btn .arrow svg {
+  stroke: #fff;
+}
+.arrow_btn .arrow:hover {
+  border-color: #ff3c38;
+  animation: arrowAnimation 0.8s infinite alternate;
+}
+.arrow_btn .arrow:hover svg {
+  stroke: #ff3c38;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
 .team_content {
   margin: 0 auto;
 }

@@ -7,7 +7,10 @@ $white: #fff;
 $fontLight: 300;
 $fontBold: 900;
 
-// --------------------------------------------
+// BASE STYLES --------------------------------------------
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #000;
   color: $white;
@@ -70,10 +73,18 @@ h5 {
   width: 100%;
 }
 // --------------------------------------------
+// .wrapper {
+//   overflow: hidden;
+//   height: 100vh;
+// }
+// .block {
+//   // height: 100vh;
+// }
+// --------------------------------------------
 .kv {
   height: 100vh;
   .kv_pic {
-    margin: 100px auto;
+    margin: 0 auto;
   }
   .scroll {
     display: inline-block;
@@ -108,23 +119,49 @@ h5 {
 header {
   align-items: center;
   margin-bottom: 50px;
+  padding: 0 60px;
+  height: 100px;
+  transition: top 0.3s ease;
   .navList {
     letter-spacing: 0.2em;
     position: relative;
     li {
+      padding: 0 20px;
       a {
         display: block;
-        // margin-right: 10px;
-        padding-left: 20px;
+        padding: 10px 0;
+        &.active {
+          color: $primary;
+          font-weight: $fontBold;
+          letter-spacing: 0;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            // transform: translateX(-50%);
+            width: 70%;
+            height: 5px;
+            background: #ff3c38;
+          }
+        }
       }
-    }
-    .active {
-      color: yellow;
-      position: relative;
     }
   }
 }
-
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.9;
+  z-index: 99;
+}
+main {
+  padding-top: 100px;
+}
 .title {
   text-align: center;
   // margin: 100px 0;
@@ -144,6 +181,47 @@ header {
   }
 }
 
+// ------------- 輪播 ----------------------
+.ad_contant {
+  overflow: hidden;
+  ul {
+    // display: flex;
+    // gap: 20px;
+  }
+}
+.arrow_btn {
+  cursor: pointer;
+  .arrow {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $white;
+    border-radius: 100%;
+    transition: transform 0.5s ease-in-out;
+    svg {
+      stroke: $white;
+    }
+  }
+  .arrow:hover {
+    border-color: $primary;
+    animation: arrowAnimation 0.8s infinite alternate;
+    svg {
+      stroke: $primary;
+    }
+  }
+}
+@keyframes arrowAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+// --------------------------
+
+// --------------------------
 //區塊三
 .team_content {
   margin: 0 auto;
