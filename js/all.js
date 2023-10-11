@@ -47,23 +47,44 @@ window.addEventListener("scroll", function () {
 const toggleBar = document.querySelector("#hambuger-contain");
 const nav = document.querySelector(".nav_ham");
 const menuBg = document.querySelector("#menu-bg");
-const body = document.querySelector("body");
+const body = document.body;
 
 const toChange = () => {
   toggleBar.classList.toggle("change");
   nav.classList.toggle("change");
   menuBg.classList.toggle("change-bg");
 
-  // check change-bg
-  if (menuBg.classList.contains("change-bg")) {
-    body.style.overflow = "hidden";
-  } else {
-    body.style.overflow = "auto";
-  }
+  body.style.overflow = menuBg.classList.contains("change-bg")
+    ? "hidden"
+    : "auto";
 };
 
 toggleBar.addEventListener("click", toChange);
-nav.addEventListener("click", toChange);
+
+const menuLinks = document.querySelectorAll(".nav_ham a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    // 移除所有連結的 active 類別
+    menuLinks.forEach((l) => {
+      l.classList.remove("active");
+    });
+
+    // 將 active 類別添加到被點擊的連結
+    link.classList.add("active");
+
+    // 點擊連結後收合菜單
+    toChange();
+
+    // 這裡可以加上捲動到對應區段的程式碼
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
 // hamburger end ------------------------------------------
 
 // form表單
