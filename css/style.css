@@ -98,6 +98,10 @@ h5 {
   margin-bottom: 60px;
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 .wrapper {
   height: 100vh;
   display: flex;
