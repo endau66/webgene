@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -22,22 +23,45 @@
       </div>
 
       <!-- header -->
-      <header class="row container" id="header">
+      <header class="row" id="header">
         <h1>
           <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
         </h1>
+
         <nav>
-          <ul class="navList row">
+          <ul class="navList row nav" id="nav">
             <li><a href="#service">ITEMS</a></li>
             <li><a href="#carousel">CHARACTERS</a></li>
-            <li><a href="#team">TEAM</a></li>
+            <li><a href="#team">SOMETHING</a></li>
             <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </header>
-      <!-- header end-->
 
-      <main class="main">
+      <!-- hamburger for pad & phone -->
+      <div id="menu-bar">
+        <!-- hamburger start -->
+        <div class="hambuger-container" id="hambuger-contain">
+          <div class="hambuger1"></div>
+          <div class="hambuger2"></div>
+          <div class="hambuger3"></div>
+        </div>
+        <!-- hamburger end -->
+      </div>
+      <div class="menu-bg" id="menu-bg">
+        <ul class="nav_ham" id="nav">
+          <li>
+            <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
+          </li>
+          <li><a href="#service">ITEMS</a></li>
+          <li><a href="#carousel">CHARACTERS</a></li>
+          <li><a href="#team">SOMETHING</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+      <!--  -->
+
+      <main id="main" class="main">
         <section id="service" class="container mb_100 block">
           <div class="title">
             <h2>ITEMS</h2>
@@ -45,7 +69,7 @@
           </div>
           <div class="sv_content col-8">
             <!-- I-Item -->
-            <div class="sv_item row">
+            <div class="sv_item row" data-aos="fade-right">
               <div class="sv_text col-5">
                 <h3>Kellogg's Eggo</h3>
                 <p>
@@ -58,7 +82,7 @@
               </div>
             </div>
             <!-- II-Item -->
-            <div class="sv_item row-rev">
+            <div class="sv_item row-rev" data-aos="fade-left">
               <div class="sv_text col-5">
                 <h3>Spiked Bat</h3>
                 <p>
@@ -72,7 +96,7 @@
               </div>
             </div>
             <!-- III-Item -->
-            <div class="sv_item row">
+            <div class="sv_item row" data-aos="fade-right">
               <div class="sv_text col-5">
                 <h3>Supercoms</h3>
                 <p>
@@ -91,11 +115,11 @@
 
         <!--------- section II輪播 --------------------->
         <section id="carousel" class="container mb_100 block">
-          <div class="title">
+          <div class="title" data-aos="fade-up">
             <h2>CHARACTERS</h2>
             <p>In Stranger Things characters</p>
           </div>
-          <div class="glide ad_contant">
+          <div class="glide ad_contant" data-aos="fade-up">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides row">
                 <li class="glide__slide">
@@ -103,7 +127,6 @@
                     <img src="./img/st-wrapper01.jpg" alt="wrapper01" />
                     <div class="ad_box_txt row">
                       <span>Stranger Things V</span>
-                      <a href="#">OVER VIEW</a>
                     </div>
                   </div>
                 </li>
@@ -112,7 +135,6 @@
                     <img src="./img/st-wrapper02.jpg" alt="wrapper01" />
                     <div class="ad_box_txt row">
                       <span>Stranger Things IV</span>
-                      <a href="#">OVER VIEW</a>
                     </div>
                   </div>
                 </li>
@@ -121,7 +143,6 @@
                     <img src="./img/st-wrapper03.jpg" alt="wrapper01" />
                     <div class="ad_box_txt row">
                       <span>Stranger Things III</span>
-                      <a href="#">OVER VIEW</a>
                     </div>
                   </div>
                 </li>
@@ -173,12 +194,12 @@
 
         <!--------- section III --------------------->
         <section id="team" class="container mb_100 block">
-          <div class="title">
-            <h2>TEAM</h2>
+          <div class="title" data-aos="fade-up">
+            <h2>SOMETHING</h2>
             <p>In Stranger Things characters</p>
           </div>
-          <div class="team_content row col-8">
-            <div class="team_item team_box01">
+          <div class="team_content row col-8" data-aos="fade-up">
+            <div class="team_item team_box01" data-aos="fade-up-right">
               <h4>Demogorgon</h4>
               <div class="team_icon">
                 <img src="./img/box3-01.png" alt="photo" />
@@ -192,7 +213,7 @@
                 </p>
               </div>
             </div>
-            <div class="team_item team_box02">
+            <div class="team_item team_box02" data-aos="fade-up-right">
               <h4>Joyce</h4>
               <div class="team_icon">
                 <img src="./img/box3-02.png" alt="" />
@@ -206,7 +227,7 @@
                 </p>
               </div>
             </div>
-            <div class="team_item team_box03">
+            <div class="team_item team_box03" data-aos="fade-up-right">
               <h4>Sony Walk­man</h4>
               <div class="team_icon">
                 <img src="./img/box3-03.png" alt="" />
@@ -227,7 +248,7 @@
         <section id="contact" class="block">
           <div class="contact_bg">
             <div class="container row">
-              <div class="contact_l col-5">
+              <div class="contact_l">
                 <div class="title">
                   <h2>contact</h2>
                   <p>
@@ -245,16 +266,16 @@
                 </div>
                 <img src="./img/header-logo.png" alt="logo" />
               </div>
-              <div class="contact_r col-5">
+              <div class="contact_r">
                 <div class="info_form">
-                  <div data-text="NAME">
-                    <input class="input_txt" type="text" placeholder="NAME" />
+                  <div class="input_box" data-text="NAME">
+                    <input class="input_txt active" type="text" />
                   </div>
-                  <div data-text="EMAIL">
-                    <input class="input_txt" type="email" placeholder="EMAIL" />
+                  <div class="input_box" data-text="EMAIL">
+                    <input class="input_txt" type="email" />
                   </div>
-                  <div data-text="PHONE">
-                    <input class="input_txt" type="tel" placeholder="PHONE" />
+                  <div class="input_box" data-text="PHONE">
+                    <input class="input_txt" type="tel" />
                   </div>
                   <div>
                     <div class="area_txt">NOTES</div>
@@ -269,13 +290,14 @@
       </main>
 
       <footer>
-        <div class="container block">
+        <div class="ft_box">
           <span>STRANGER THINGS™ © Netflix 2023</span>
-          <a href="#header"><img src="./img/arrow.svg" alt="arrowTop" /></a>
+          <a href="#main"><img src="./img/arrow.svg" alt="arrowTop" /></a>
         </div>
       </footer>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="./js/all.js"></script>
   </body>

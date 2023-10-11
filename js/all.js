@@ -1,4 +1,7 @@
-// header
+// aos
+AOS.init();
+
+// fixed header  ------------------------------------------
 window.addEventListener("scroll", function () {
   const kv = document.querySelector(".kv");
   const header = document.querySelector("#header");
@@ -10,8 +13,9 @@ window.addEventListener("scroll", function () {
     header.classList.remove("header-fixed");
   }
 });
+// fixed header end ------------------------------------------
 
-//
+// header nav change ------------------------------------------
 var navList = document.querySelector(".navList");
 var sections = document.querySelectorAll("section");
 var headerHeight = document.querySelector("header").offsetHeight;
@@ -35,6 +39,57 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+// header nav change end ----------------------------------------
+
+// hamburger star ------------------------------------------
+const toggleBar = document.querySelector("#hambuger-contain");
+const nav = document.querySelector(".nav_ham");
+const menuBg = document.querySelector("#menu-bg");
+const body = document.querySelector("body");
+
+const toChange = () => {
+  toggleBar.classList.toggle("change");
+  nav.classList.toggle("change");
+  menuBg.classList.toggle("change-bg");
+
+  // check change-bg
+  if (menuBg.classList.contains("change-bg")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "auto";
+  }
+};
+
+toggleBar.addEventListener("click", toChange);
+nav.addEventListener("click", toChange);
+// hamburger end ------------------------------------------
+
+// form表單
+const inputBoxContainers = document.querySelectorAll(".input_box");
+const textareaElement = document.querySelector(".input_textarea");
+
+inputBoxContainers.forEach((container) => {
+  const inputElement = container.querySelector(".input_txt");
+
+  container.addEventListener("click", () => {
+    container.classList.add("active");
+    inputElement.focus();
+  });
+
+  inputElement.addEventListener("blur", () => {
+    if (inputElement.value.trim() === "") {
+      container.classList.remove("active");
+    }
+  });
+
+  if (inputElement.value.trim() !== "") {
+    container.classList.add("active");
+  }
+});
+
+textareaElement.addEventListener("click", () => {
+  textareaElement.classList.add("active");
+});
 
 // 輪播
 const config = {
@@ -43,7 +98,7 @@ const config = {
   focusAt: "center",
   perView: 3,
   //   gap: 20,
-  //   autoplay: 5000,
+  autoplay: 5000,
   breakpoints: {
     1200: {
       perView: 3,
