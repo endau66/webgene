@@ -38,7 +38,12 @@ h5 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 120px;
+  padding: 120px 30px 0;
+}
+@media (max-width: 820px) {
+  .container {
+    padding-top: 60px;
+  }
 }
 
 .row {
@@ -80,21 +85,41 @@ h5 {
   width: 100%;
 }
 
-.kv {
-  height: 100vh;
+.btn {
+  border: transparent;
+  cursor: pointer;
+  padding: 10px 50px;
+  border-radius: 100px;
+  font-weight: 700;
 }
-.kv .kv_pic {
+
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.wrapper .kv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .kv .kv_pic {
   margin: 0 auto;
 }
-.kv .scroll {
+.wrapper .scroll {
   display: inline-block;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: 200;
   letter-spacing: 0.2em;
+  text-align: center;
 }
-.kv .scroll:before {
+.wrapper .scroll:before {
   content: "";
   width: 0.5px;
   height: 0;
@@ -149,13 +174,23 @@ header .navList li a.active::before {
   background: #ff3c38;
 }
 
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.9;
+  z-index: 99;
+}
+
 #menu-bar {
   display: none;
 }
 
 .hambuger-container {
   text-align: center;
-  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
 
@@ -172,7 +207,6 @@ header .navList li a.active::before {
 .hambuger-container {
   display: inline-block;
   cursor: pointer;
-  margin: 30px 50px;
 }
 
 .change .hambuger1 {
@@ -186,11 +220,13 @@ header .navList li a.active::before {
 }
 
 .nav_ham {
+  letter-spacing: 0.2em;
   padding: 0;
   margin: 0 20px;
   transition: 0.3s ease;
   display: none;
   text-align: center;
+  position: relative;
 }
 .nav_ham li {
   margin-bottom: 40px;
@@ -198,6 +234,12 @@ header .navList li a.active::before {
 }
 .nav_ham li img {
   display: inline-block;
+  width: 150px;
+}
+.nav_ham li a {
+  display: block;
+  padding: 10px 0;
+  color: #fff;
 }
 
 .change {
@@ -227,21 +269,6 @@ header .navList li a.active::before {
   width: 100%;
   height: 100vh;
   background: #000;
-}
-
-.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #000;
-  opacity: 0.9;
-  z-index: 99;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 60px;
 }
 
 .sv_content {
@@ -316,12 +343,48 @@ header .navList li a.active::before {
   opacity: 0.8;
 }
 
+.viewMore {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.viewMore .btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.viewMore .btn:hover {
+  border-color: #ff3c38;
+  color: #ff3c38;
+}
+
 @keyframes arrowAnimation {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.2);
+  }
+}
+@media (max-width: 820px) {
+  .ad_contant .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ad_contant .ad_box {
+    opacity: 1;
+    max-width: 500px;
+    margin-bottom: 60px;
+  }
+  .ad_contant .ad_box img {
+    width: 500px;
+  }
+  .ad_contant li:nth-child(3) .ad_box {
+    margin-bottom: 0;
+  }
+  .arrow_btn {
+    display: none;
   }
 }
 .team_content {
@@ -365,7 +428,11 @@ header .navList li a.active::before {
     width: 100%;
   }
   .team_content .team_item {
-    width: 80%;
+    width: 70%;
+  }
+  .team_content .team_box01,
+  .team_content .team_box03 {
+    margin: 0;
   }
 }
 
@@ -375,19 +442,24 @@ header .navList li a.active::before {
   position: relative;
   padding: 100px 0;
 }
+.contact_bg .container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .contact_bg .contact_l,
 .contact_bg .contact_r {
   width: 50%;
 }
 .contact_bg .contact_l {
   color: #333;
-  margin-right: 10em;
+  margin-right: 5%;
 }
 .contact_bg .contact_l .title {
   text-align: left;
   margin: 0 0 150px;
 }
 .contact_bg .contact_l .phone_box {
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 20px;
@@ -401,6 +473,9 @@ header .navList li a.active::before {
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid #333;
+}
+.contact_bg .contact_r {
+  margin-left: 5%;
 }
 .contact_bg .contact_r:before {
   content: "";
@@ -466,20 +541,31 @@ header .navList li a.active::before {
 .contact_bg .contact_r .info_form .input_textarea:focus {
   border: 1px solid #ff3c38;
 }
-.contact_bg .contact_r .info_form .btn {
-  border: transparent;
-  cursor: pointer;
-  padding: 10px 50px;
-  border-radius: 100px;
-  font-weight: 700;
-}
 @media (max-width: 820px) {
+  .contact_bg {
+    height: auto;
+    padding: 0;
+  }
+  .contact_bg .container {
+    padding-top: 0;
+  }
   .contact_bg .row {
     flex-direction: column;
   }
   .contact_bg .contact_l,
   .contact_bg .contact_r {
-    width: 80%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10% 0;
+  }
+  .contact_bg .contact_l .title {
+    margin-bottom: 80px;
+  }
+  .contact_bg .contact_r:before {
+    width: 100%;
+    height: 57.5%;
+    bottom: 0;
+    top: auto;
   }
 }
 

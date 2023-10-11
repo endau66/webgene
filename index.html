@@ -16,286 +16,289 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <!-- <div class="sp__wrapper"></div> -->
+    <div class="wrapper" id="sp__wrapper">
       <div class="kv block">
         <img class="kv_pic" src="./img/st-moon.png" alt="moon" />
-        <span class="scroll">SCROLL</span>
       </div>
+      <span class="scroll">SCROLL</span>
+    </div>
 
-      <!-- header -->
-      <header class="row" id="header">
-        <h1>
-          <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
-        </h1>
+    <!-- header -->
+    <header class="row" id="header">
+      <h1>
+        <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
+      </h1>
 
-        <nav>
-          <ul class="navList row nav" id="nav">
-            <li><a href="#service">ITEMS</a></li>
-            <li><a href="#carousel">CHARACTERS</a></li>
-            <li><a href="#team">SOMETHING</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <!-- hamburger for pad & phone -->
-      <div id="menu-bar">
-        <!-- hamburger start -->
-        <div class="hambuger-container" id="hambuger-contain">
-          <div class="hambuger1"></div>
-          <div class="hambuger2"></div>
-          <div class="hambuger3"></div>
-        </div>
-        <!-- hamburger end -->
-      </div>
-      <div class="menu-bg" id="menu-bg">
-        <ul class="nav_ham" id="nav">
-          <li>
-            <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
-          </li>
+      <nav>
+        <ul class="navList row nav" id="nav">
           <li><a href="#service">ITEMS</a></li>
           <li><a href="#carousel">CHARACTERS</a></li>
           <li><a href="#team">SOMETHING</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
+      </nav>
+    </header>
+
+    <!-- hamburger for pad & phone -->
+    <div id="menu-bar">
+      <!-- hamburger start -->
+      <div class="hambuger-container" id="hambuger-contain">
+        <div class="hambuger1"></div>
+        <div class="hambuger2"></div>
+        <div class="hambuger3"></div>
       </div>
-      <!--  -->
-
-      <main id="main" class="main">
-        <section id="service" class="container mb_100 block">
-          <div class="title">
-            <h2>ITEMS</h2>
-            <p>For all physical items found in Stranger Things</p>
-          </div>
-          <div class="sv_content col-8">
-            <!-- I-Item -->
-            <div class="sv_item row" data-aos="fade-right">
-              <div class="sv_text col-5">
-                <h3>Kellogg's Eggo</h3>
-                <p>
-                  Eggo is a brand of frozen waffles made by the Kellogg Company,
-                  and sold in North America. Eleven is obsessed with them.
-                </p>
-              </div>
-              <div class="sv_img">
-                <img src="./img/st02.jpg" alt="waffles" />
-              </div>
-            </div>
-            <!-- II-Item -->
-            <div class="sv_item row-rev" data-aos="fade-left">
-              <div class="sv_text col-5">
-                <h3>Spiked Bat</h3>
-                <p>
-                  The spiked bat is a weapon created by Jonathan Byers to defeat
-                  the Demogorgon, before it was used by Steve Harrington against
-                  Demodogs.
-                </p>
-              </div>
-              <div class="sv_img">
-                <img src="./img/st03.jpg" alt="waffles" />
-              </div>
-            </div>
-            <!-- III-Item -->
-            <div class="sv_item row" data-aos="fade-right">
-              <div class="sv_text col-5">
-                <h3>Supercoms</h3>
-                <p>
-                  Mike Wheeler, Dustin Henderson, Lucas Sinclair and Will Byers
-                  each owned a walkie-talkie to maintain contact with each
-                  other. These walkie-talkies, also referred to as Supercoms,
-                  are reminiscent to the Radio Shack's Realistic TRC-214 brands.
-                </p>
-              </div>
-              <div class="sv_img">
-                <img src="./img/st04.jpg" alt="waffles" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--------- section II輪播 --------------------->
-        <section id="carousel" class="container mb_100 block">
-          <div class="title" data-aos="fade-up">
-            <h2>CHARACTERS</h2>
-            <p>In Stranger Things characters</p>
-          </div>
-          <div class="glide ad_contant" data-aos="fade-up">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides row">
-                <li class="glide__slide">
-                  <div class="ad_box">
-                    <img src="./img/st-wrapper01.jpg" alt="wrapper01" />
-                    <div class="ad_box_txt row">
-                      <span>Stranger Things V</span>
-                    </div>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="ad_box">
-                    <img src="./img/st-wrapper02.jpg" alt="wrapper01" />
-                    <div class="ad_box_txt row">
-                      <span>Stranger Things IV</span>
-                    </div>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="ad_box">
-                    <img src="./img/st-wrapper03.jpg" alt="wrapper01" />
-                    <div class="ad_box_txt row">
-                      <span>Stranger Things III</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- 輪播按鈕  -->
-            <div class="arrow_btn glide__arrows row" data-glide-el="controls">
-              <div
-                class="arrow glide__arrow glide__arrow--left"
-                data-glide-dir="<"
-              >
-                <svg
-                  width="26"
-                  height="28"
-                  viewBox="-1 -1 26 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13 20.5972L5.70833 13.3055L13 6.01384"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div
-                class="arrow glide__arrow glide__arrow--right"
-                data-glide-dir=">"
-              >
-                <svg
-                  width="26"
-                  height="28"
-                  viewBox="2 0 26 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13 7.40283L20.2917 14.6945L13 21.9862"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--------- section III --------------------->
-        <section id="team" class="container mb_100 block">
-          <div class="title" data-aos="fade-up">
-            <h2>SOMETHING</h2>
-            <p>In Stranger Things characters</p>
-          </div>
-          <div class="team_content row col-8" data-aos="fade-up">
-            <div class="team_item team_box01" data-aos="fade-up-right">
-              <h4>Demogorgon</h4>
-              <div class="team_icon">
-                <img src="./img/box3-01.png" alt="photo" />
-              </div>
-              <div class="team_txt">
-                <h5>The Demogorgon</h5>
-                <p>
-                  The Demogorgon, also known as the Monster, was a predatory
-                  humanoid creature that entered Hawkins, Indiana in November
-                  1983.
-                </p>
-              </div>
-            </div>
-            <div class="team_item team_box02" data-aos="fade-up-right">
-              <h4>Joyce</h4>
-              <div class="team_icon">
-                <img src="./img/box3-02.png" alt="" />
-              </div>
-              <div class="team_txt">
-                <h5>Joyce Box</h5>
-                <p>
-                  Maybe I am a mess, maybe I’m crazy, maybe I’m out of my mind!
-                  But, God help me, I will keep these lights up until the day I
-                  die, if I think there’s a chance that Will's still out there!
-                </p>
-              </div>
-            </div>
-            <div class="team_item team_box03" data-aos="fade-up-right">
-              <h4>Sony Walk­man</h4>
-              <div class="team_icon">
-                <img src="./img/box3-03.png" alt="" />
-              </div>
-              <div class="team_txt">
-                <h5>Max Mayfield</h5>
-                <p>
-                  The song that comes on Max's headphones is “Running Up That
-                  Hill” by Kate Bush, the lead single off the English pop
-                  artist's 1985 album Hounds of Love.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- contact -->
-        <section id="contact" class="block">
-          <div class="contact_bg">
-            <div class="container row">
-              <div class="contact_l">
-                <div class="title">
-                  <h2>contact</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet <br />
-                    consectetur adipisicing elit
-                  </p>
-                </div>
-                <div class="phone_box row">
-                  <img src="./img/phone.svg" alt="phone" />
-                  <p>+886-8-1234-5678</p>
-                </div>
-                <div class="nameAde">
-                  <p>STRANGER THINGS™ Company</p>
-                  <p>3785 S Las Vegas Blvd, Suite #102, Las Vegas, NV 89109</p>
-                </div>
-                <img src="./img/header-logo.png" alt="logo" />
-              </div>
-              <div class="contact_r">
-                <div class="info_form">
-                  <div class="input_box" data-text="NAME">
-                    <input class="input_txt active" type="text" />
-                  </div>
-                  <div class="input_box" data-text="EMAIL">
-                    <input class="input_txt" type="email" />
-                  </div>
-                  <div class="input_box" data-text="PHONE">
-                    <input class="input_txt" type="tel" />
-                  </div>
-                  <div>
-                    <div class="area_txt">NOTES</div>
-                    <textarea class="input_textarea"></textarea>
-                  </div>
-                  <button class="btn">SEND</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div class="ft_box">
-          <span>STRANGER THINGS™ © Netflix 2023</span>
-          <a href="#main"><img src="./img/arrow.svg" alt="arrowTop" /></a>
-        </div>
-      </footer>
+      <!-- hamburger end -->
     </div>
+    <div class="menu-bg" id="menu-bg">
+      <ul class="nav_ham" id="nav">
+        <li>
+          <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
+        </li>
+        <li><a href="#service">ITEMS</a></li>
+        <li><a href="#carousel">CHARACTERS</a></li>
+        <li><a href="#team">SOMETHING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <main id="main" class="main">
+      <section id="service" class="container mb_100 block">
+        <div class="title">
+          <h2>ITEMS</h2>
+          <p>For all physical items found in Stranger Things</p>
+        </div>
+        <div class="sv_content col-8">
+          <!-- I-Item -->
+          <div class="sv_item row" data-aos="fade-right">
+            <div class="sv_text col-5">
+              <h3>Kellogg's Eggo</h3>
+              <p>
+                Eggo is a brand of frozen waffles made by the Kellogg Company,
+                and sold in North America. Eleven is obsessed with them.
+              </p>
+            </div>
+            <div class="sv_img">
+              <img src="./img/st02.jpg" alt="waffles" />
+            </div>
+          </div>
+          <!-- II-Item -->
+          <div class="sv_item row-rev" data-aos="fade-left">
+            <div class="sv_text col-5">
+              <h3>Spiked Bat</h3>
+              <p>
+                The spiked bat is a weapon created by Jonathan Byers to defeat
+                the Demogorgon, before it was used by Steve Harrington against
+                Demodogs.
+              </p>
+            </div>
+            <div class="sv_img">
+              <img src="./img/st03.jpg" alt="waffles" />
+            </div>
+          </div>
+          <!-- III-Item -->
+          <div class="sv_item row" data-aos="fade-right">
+            <div class="sv_text col-5">
+              <h3>Supercoms</h3>
+              <p>
+                Mike Wheeler, Dustin Henderson, Lucas Sinclair and Will Byers
+                each owned a walkie-talkie to maintain contact with each other.
+                These walkie-talkies, also referred to as Supercoms, are
+                reminiscent to the Radio Shack's Realistic TRC-214 brands.
+              </p>
+            </div>
+            <div class="sv_img">
+              <img src="./img/st04.jpg" alt="waffles" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------- 輪播 - box2      --------------------->
+      <section id="carousel" class="container mb_100 block">
+        <div class="title" data-aos="fade-up">
+          <h2>CHARACTERS</h2>
+          <p>In Stranger Things characters</p>
+        </div>
+        <div class="glide ad_contant" data-aos="fade-up">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides row">
+              <li class="glide__slide">
+                <div class="ad_box">
+                  <img src="./img/st-wrapper01.jpg" alt="wrapper01" />
+                  <div class="ad_box_txt row">
+                    <span>Stranger Things V</span>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="ad_box">
+                  <img src="./img/st-wrapper02.jpg" alt="wrapper01" />
+                  <div class="ad_box_txt row">
+                    <span>Stranger Things IV</span>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="ad_box">
+                  <img src="./img/st-wrapper03.jpg" alt="wrapper01" />
+                  <div class="ad_box_txt row">
+                    <span>Stranger Things III</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 輪播 btn  -->
+          <div class="arrow_btn glide__arrows row" data-glide-el="controls">
+            <div
+              class="arrow glide__arrow glide__arrow--left"
+              data-glide-dir="<"
+            >
+              <svg
+                width="26"
+                height="28"
+                viewBox="-1 -1 26 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 20.5972L5.70833 13.3055L13 6.01384"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="arrow glide__arrow glide__arrow--right"
+              data-glide-dir=">"
+            >
+              <svg
+                width="26"
+                height="28"
+                viewBox="2 0 26 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 7.40283L20.2917 14.6945L13 21.9862"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="viewMore">
+          <button class="btn">VIEW MORE</button>
+        </div>
+      </section>
+
+      <!--------- something - box3 --------------------->
+      <section id="team" class="container mb_100 block">
+        <div class="title" data-aos="fade-up">
+          <h2>SOMETHING</h2>
+          <p>In Stranger Things characters</p>
+        </div>
+        <div class="team_content row col-8" data-aos="fade-up">
+          <div class="team_item team_box01" data-aos="fade-up-right">
+            <h4>Demogorgon</h4>
+            <div class="team_icon">
+              <img src="./img/box3-01.png" alt="photo" />
+            </div>
+            <div class="team_txt">
+              <h5>The Demogorgon</h5>
+              <p>
+                The Demogorgon, also known as the Monster, was a predatory
+                humanoid creature that entered Hawkins, Indiana in November
+                1983.
+              </p>
+            </div>
+          </div>
+          <div class="team_item team_box02" data-aos="fade-up-right">
+            <h4>Joyce</h4>
+            <div class="team_icon">
+              <img src="./img/box3-02.png" alt="" />
+            </div>
+            <div class="team_txt">
+              <h5>Joyce Box</h5>
+              <p>
+                Maybe I am a mess, maybe I’m crazy, maybe I’m out of my mind!
+                But, God help me, I will keep these lights up until the day I
+                die, if I think there’s a chance that Will's still out there!
+              </p>
+            </div>
+          </div>
+          <div class="team_item team_box03" data-aos="fade-up-right">
+            <h4>Sony Walk­man</h4>
+            <div class="team_icon">
+              <img src="./img/box3-03.png" alt="" />
+            </div>
+            <div class="team_txt">
+              <h5>Max Mayfield</h5>
+              <p>
+                The song that comes on Max's headphones is “Running Up That
+                Hill” by Kate Bush, the lead single off the English pop artist's
+                1985 album Hounds of Love.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------- contact - box4   --------------------->
+      <section id="contact" class="block">
+        <div class="contact_bg">
+          <div class="container row">
+            <div class="contact_l">
+              <div class="title">
+                <h2>contact</h2>
+                <p>
+                  Lorem ipsum dolor sit amet <br />
+                  consectetur adipisicing elit
+                </p>
+              </div>
+              <div class="phone_box">
+                <img src="./img/phone.svg" alt="phone" />
+                <p>+886-8-1234-5678</p>
+              </div>
+              <div class="nameAde">
+                <p>STRANGER THINGS™ Company</p>
+                <p>3785 S Las Vegas Blvd, Suite #102, Las Vegas, NV 89109</p>
+              </div>
+              <img src="./img/header-logo.png" alt="logo" />
+            </div>
+            <div class="contact_r">
+              <div class="info_form">
+                <div class="input_box" data-text="NAME">
+                  <input class="input_txt active" type="text" />
+                </div>
+                <div class="input_box" data-text="EMAIL">
+                  <input class="input_txt" type="email" />
+                </div>
+                <div class="input_box" data-text="PHONE">
+                  <input class="input_txt" type="tel" />
+                </div>
+                <div>
+                  <div class="area_txt">NOTES</div>
+                  <textarea class="input_textarea"></textarea>
+                </div>
+                <button class="btn">SEND</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ft_box">
+        <span>STRANGER THINGS™ © Netflix 2023</span>
+        <a href="#main"><img src="./img/arrow.svg" alt="arrowTop" /></a>
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>

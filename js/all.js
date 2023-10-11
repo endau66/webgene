@@ -91,28 +91,42 @@ textareaElement.addEventListener("click", () => {
   textareaElement.classList.add("active");
 });
 
-// 輪播
-const config = {
-  type: "carousel",
-  startAt: 0,
-  focusAt: "center",
-  perView: 3,
-  //   gap: 20,
-  autoplay: 5000,
-  breakpoints: {
-    1200: {
-      perView: 3,
-    },
-    820: {
-      perView: 2,
-    },
-    768: {
-      perView: 2,
-    },
-    434: {
-      perView: 1,
-    },
-  },
-};
+// pad mobile 輪播 change
+// 重新初始化 Glide
+let glide = null;
 
-new Glide(".glide", config).mount();
+function handleGlide() {
+  if (window.innerWidth >= 821) {
+    if (!glide) {
+      const config = {
+        type: "carousel",
+        startAt: 0,
+        focusAt: "center",
+        perView: 3,
+        gap: 30,
+        autoplay: 5000,
+      };
+      glide = new Glide(".glide", config);
+      glide.mount();
+    }
+  } else if (glide) {
+    glide.destroy();
+    glide = null;
+  }
+}
+
+window.addEventListener("resize", handleGlide);
+
+handleGlide();
+
+// 輪播
+// const config = {
+//   type: "carousel",
+//   startAt: 0,
+//   focusAt: "center",
+//   perView: 3,
+//   gap: 30,
+//   autoplay: 5000,
+// };
+
+// new Glide(".glide", config).mount();
