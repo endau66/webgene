@@ -16,29 +16,31 @@ window.addEventListener("scroll", function () {
 // fixed header end ------------------------------------------
 
 // header nav change ------------------------------------------
-var navList = document.querySelector(".navList");
-var sections = document.querySelectorAll("section");
-var headerHeight = document.querySelector("header").offsetHeight;
+const navList = document.querySelector(".navList");
+const sections = document.querySelectorAll("section");
+const headerHeight = document.querySelector("header").offsetHeight;
+
+const links = navList.querySelectorAll("a");
 
 window.addEventListener("scroll", function () {
-  var scrollPosition = window.scrollY;
+  const scrollPosition = window.scrollY;
   sections.forEach(function (section) {
-    var rect = section.getBoundingClientRect();
-
-    var sectionTop = rect.top + scrollPosition - headerHeight;
-    var sectionBottom = rect.bottom + scrollPosition - headerHeight;
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top + scrollPosition - headerHeight;
+    const sectionBottom = rect.bottom + scrollPosition - headerHeight;
 
     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-      navList.querySelectorAll("a").forEach(function (link) {
+      links.forEach(function (link) {
         link.classList.remove("active");
       });
-      var link = navList.querySelector('a[href="#' + section.id + '"]');
+      const link = navList.querySelector('a[href="#' + section.id + '"]');
       if (link) {
         link.classList.add("active");
       }
     }
   });
 });
+
 // header nav change end ----------------------------------------
 
 // hamburger star ------------------------------------------
@@ -118,15 +120,3 @@ function handleGlide() {
 window.addEventListener("resize", handleGlide);
 
 handleGlide();
-
-// 輪播
-// const config = {
-//   type: "carousel",
-//   startAt: 0,
-//   focusAt: "center",
-//   perView: 3,
-//   gap: 30,
-//   autoplay: 5000,
-// };
-
-// new Glide(".glide", config).mount();
